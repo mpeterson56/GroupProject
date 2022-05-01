@@ -13,8 +13,17 @@ function formHandler(event) {
 
 function getDiscography(artist) {
     var APIkey = "2272bb113a5e5a54f0040d944c8e7d08"
-    var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=justin%20bieber&page_size=3&page=1&s_track_rating=desc";
+    var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + artist + "&page_size=3&page=1&s_track_rating=desc";
     console.log(APIurl)
+
+    if (artist.match(/\s/)) {
+        var a = artist.split(' ').join('%20');
+        var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + a + "&page_size=3&page=1&s_track_rating=desc";
+        console.log(APIurl);
+        
+    } else {
+        var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + artist + "&page_size=3&page=1&s_track_rating=desc";
+    }
     
     fetch(APIurl).then(function(response) {
         if (!response.ok) {
@@ -33,4 +42,6 @@ function getDiscography(artist) {
     });
 }
 
-searchButtonEl.addEventListener("click", formHandler);
+searchButtonEl.addEventListener("submit", formHandler);
+
+// q_artist=justin%20bieber
