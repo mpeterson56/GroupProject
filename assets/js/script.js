@@ -34,9 +34,14 @@ function getDiscography(artist) {
                 var trackList = data.message.body.track_list[0].track.track_name
                 console.log(trackList);
                 // create for loop
+                // create counter
                 // create element "a"
-                // add href with index variable 
+                // add class list with UIkit attributes
+                // add href with data track list. make inex dynamic 
                 // add attribute to launch lyrics in new window (*, _target)
+                // create span element to to hold every thing
+                // add it to the list
+                // append to dom container
                 // increment index count by one
             })
         } else {
