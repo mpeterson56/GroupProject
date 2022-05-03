@@ -10,4 +10,5 @@ function getArtistAndSong () {
     // get song
     songTitle = url.split("=")[2];
     console.log(artistName, songTitle);
+    
 };
