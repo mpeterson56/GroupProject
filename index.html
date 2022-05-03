@@ -26,9 +26,14 @@
 <div class="uk-container uk-text-center uk-background-muted uk-column-1-1@s uk-column-1-1@m uk-column-1-2@l  " uk-grid >
         <form class="uk-container uk-padding-right-remove  ">
             <div class="uk-card uk-card-body uk-card-secondary uk-align-center uk-margin-remove  ">
-                <h3 class="uk-card-title">Search your favorite Artist, Song or Album! </h3>
-                <input class="artist uk-input" type="text" placeholder="Artist, Song or Album">   
-                
+                <h3 class="uk-card-title">Search your favorite Artist or Band! </h3>
+                <input class="artist uk-input uk-align-center uk-padding-left-15px"placeholder="Artist or Band" type="text"></input>  
+                <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+                    <ul class="uk-nav uk-dropdown-nav">
+                        <li class="uk-active"><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
                 <button type="button"  class="search-btn uk-button uk-button-default uk-align-center "><span class="uk-search-icon" uk-search-icon></span>       Search </button>
             </div>
         </form>
