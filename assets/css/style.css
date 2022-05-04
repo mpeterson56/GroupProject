@@ -1,9 +1,28 @@
-header {
+header, footer{
 background-color: grey;
 color: black;
+
 }
 
-footer {
-    background-color: grey;
-    color: black; 
+body{
+    background-color: #222;
+    
 }
+
+
+.form{
+border-color:grey ;
+border-right: 5px solid;
+border-left: 5px solid;
+border-top: 5px solid;
+border-bottom: 5px solid;
+
+}
+.songs{
+    border-color:grey ;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    
+    }
