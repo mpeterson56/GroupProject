@@ -3,9 +3,11 @@
 function getArtistAndSong () {
     // get url
     var url = document.location.search;
-
+    // console.log(document.location)
     // get artist name
-    artistName = url.split("=")[1];
+    var artistNameArr = url.split("&");
+    var artist = artistNameArr[0].split("=")[1];
+    
 
     // get song
     songTitle = url.split("=")[2];
