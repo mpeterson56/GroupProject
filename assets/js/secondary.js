@@ -10,9 +10,11 @@ function getArtistAndSong () {
     
 
     // get song
-    songTitle = url.split("=")[2];
-    console.log(artistName, songTitle);
-    
+    var songTitle = artistNameArr[1].split("=")[1];
+    // console.log(artist, songTitle);
+
+    // displayLyrics(artist, songTitle);
+
 };
 
 function displayLyrics (str1, str2) {
