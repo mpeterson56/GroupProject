@@ -19,11 +19,11 @@ function getDiscography(artist) {
     // check for spaces in the name and add a "+"
     if (artist.match(/\s/)) {
         var a = artist.split(' ').join('+');
-        var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + a + "&page_size=3&page=1&s_track_rating=desc";
+        var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + a + "&page_size=10&page=1&s_track_rating=desc";
         // console.log(APIurl);
         
     } else {
-        var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + artist + "&page_size=3&page=1&s_track_rating=desc";
+        var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + artist + "&page_size=10&page=1&s_track_rating=desc";
     }
     
     fetch(APIurl).then(function(response) {
