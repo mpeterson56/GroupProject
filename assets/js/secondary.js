@@ -18,7 +18,10 @@ function getArtistAndSong () {
 };
 
 function displayLyrics (str1, str2) {
-console.log(str1, str2);
+// console.log(str1, str2);
+
+var urlApi = "https://api.lyrics.ovh/v1/" + str1 + "/" + str2;
+console.log(urlApi);
 
 }
 
