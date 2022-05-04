@@ -12,3 +12,4 @@ function getArtistAndSong () {
     console.log(artistName, songTitle);
     
 };
+
