@@ -13,7 +13,7 @@ function getArtistAndSong () {
     var songTitle = artistNameArr[1].split("=")[1];
     // console.log(artist, songTitle);
 
-    displayLyrics(artist, songTitle);
+    // displayLyrics(artist, songTitle);
 
 };
 
