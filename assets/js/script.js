@@ -38,14 +38,14 @@ function getDiscography(artist) {
                     var trackList = data.message.body.track_list[i].track.track_name;
                     // replace spaces in song title with +
                     if (trackList.match(/\s/)) {
-                        var a = trackList.split(' ').join('+');
+                        var tracks = trackList.split(' ').join('+');
                     }
                 
                     console.log(trackList);
                     // create list elements
                     var listEl = document.createElement("li");
                     // listEl.classList = "list-item";
-                    listEl.innerHTML = "<a href=./secondary.html?artist=" + artist + "&song=" + a + ">" + trackList + "</a>";
+                    listEl.innerHTML = "<a href=./secondary.html?artist=" + a + "&song=" + tracks + ">" + trackList + "</a>";
                     songList.appendChild(listEl);
                     // console.log(listEl);
                 }
