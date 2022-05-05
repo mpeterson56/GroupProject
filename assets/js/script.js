@@ -11,23 +11,7 @@ function formAndLinkHandler(event) {
     var artistInput = artistEl.value;
     // console.log(artistInput);
 
-    // get artist name from link if there is a query string
-    // var url = document.location.search.includes("?");
-    // if (url) {
-    //     artistName = document.location.search;
-    //     var artistNameArr = artistName.split("=");
-    //     var artistPassed = artistNameArr[1];
-    //     getDiscography(artistPassed);
-    // }
-    // else {
         getDiscography(artistInput);
-    // }
-
-
-
-    // }
-
-
 
 }
 
@@ -36,8 +20,7 @@ function getDiscography(artist) {
     // check to see if song list exists
     if (songList.children.length !== 0) {
         songList.innerHTML = "";
-        // end the function
-        // return;
+    
     }
 
     var APIkey = "2272bb113a5e5a54f0040d944c8e7d08"
@@ -68,11 +51,9 @@ function getDiscography(artist) {
                         var tracks = trackList.split(' ').join('+');
                     }
 
-                    console.log(trackList);
                     // create list elements
                     var listEl = document.createElement("li");
-                    // listEl = innerHTML = "";
-                    // listEl.classList = "list-item";
+
                     if (a !== undefined) {
                     listEl.innerHTML = "<a href=./secondary.html?artist=" + a + "&song=" + tracks + ">" + trackList + "</a>";
                     }
@@ -103,15 +84,8 @@ function getArtistName() {
         // get artist name from query string pass it to lookup function
         var artistNameArr = artistName.split("=");
         var artist = artistNameArr[1];
-        // if (artist === "undefined") {
-        //     console.log("getArtistName result is undefined");
-        //     return;
-        // }
-        // else {
             getDiscography(artist);
             console.log(artist);
-        // }
-
     }
     else {
         console.log("getArtistName had 0 results")
