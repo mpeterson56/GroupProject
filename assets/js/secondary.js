@@ -37,7 +37,7 @@ function displayLyrics(artist, song) {
             });
         }
         else {
-            alert("Error: " + response.statusText);
+            UIkit.modal.dialog('Error'+ response.statusText);
         }
     });
 
