@@ -35,8 +35,9 @@ function getDiscography(artist) {
     
     // check to see if song list exists
     if (songList.children.length !== 0) {
+        songList.innerHTML = "";
         // end the function
-        return;
+        // return;
     }
 
     var APIkey = "2272bb113a5e5a54f0040d944c8e7d08"
