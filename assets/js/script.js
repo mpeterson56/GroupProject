@@ -49,11 +49,6 @@ function getDiscography(artist) {
                     songList.appendChild(listEl);
                     // console.log(listEl);
                 }
-            
-                // add attribute to launch lyrics in new window (target, _target)
-                // create span element to to hold every thing
-                // add it to the list
-                // append to dom container
                 
             });
         } else {
