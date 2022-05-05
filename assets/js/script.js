@@ -75,7 +75,7 @@ function getArtistName () {
         // get artist name from query string pass it to lookup function
         var artistNameArr = artistName.split("=");
         var artist = artistNameArr[1];
-        getDiscography(artistName);
+        getDiscography(artist);
         console.log(artist);
     }
     else {
