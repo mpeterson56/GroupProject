@@ -65,6 +65,29 @@ function getDiscography(artist) {
     });
 }
 
+function getArtistName () {
+    var artistName = document.location.search;
+    var url = document.location.search.includes("?");
+
+
+    // check for query string
+    if (url) {
+        // get artist name from query string pass it to lookup function
+        var artistNameArr = artistName.split("=");
+        var artist = artistNameArr[1];
+        getDiscography(artistName);
+        console.log(artist);
+    }
+    else {
+        console.log("getArtistName had 0 results")
+        return;
+        
+    }
+
+}
+
+getArtistName();
+
 if (searchButtonEl) {
 searchButtonEl.addEventListener("click", formHandler);
 }

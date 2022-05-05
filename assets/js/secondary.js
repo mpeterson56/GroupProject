@@ -19,12 +19,6 @@ function getArtistAndSong() {
 };
 
 function displayLyrics(artist, song) {
-    // console.log(str1, str2);
-
-    // var homeLink = document.createElement("a");
-    // homeLink.href = "./index.html?artist=" + artist;
-    // createHomeLink.appendChild(homeLink);
-    // console.log(createHomeLink);
 
     var urlApi = "https://api.lyrics.ovh/v1/" + artist + "/" + song;
     // console.log(urlApi);
