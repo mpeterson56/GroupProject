@@ -28,7 +28,7 @@ function getDiscography(artist) {
     
     fetch(APIurl).then(function(response) {
         if (!response.ok) {
-            alert("Please enter a valid artist!");
+            UIkit.modal.dialog("Can't access track list!");
         } else if (response.ok) {
             response.json().then(function(data) {
                 var trackListArr = data.message.body.track_list;
@@ -52,11 +52,11 @@ function getDiscography(artist) {
                 
             });
         } else {
-            alert("Error: " + response.statusText);
+            UIkit.modal.dialog('ERROR!'+response.statusText);
         }
     })
     .catch(function (error) { 
-        alert("Can't access track list!");
+        UIkit.modal.dialog('Please enter valid artist!');
     });
 }
 
