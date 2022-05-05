@@ -21,7 +21,6 @@ function getArtistAndSong() {
 function displayLyrics(artist, song) {
 
     var urlApi = "https://api.lyrics.ovh/v1/" + artist + "/" + song;
-    // console.log(urlApi);
 
     // make a get request with to API
     fetch(urlApi).then(function (response) {
