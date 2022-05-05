@@ -36,3 +36,12 @@ border-bottom: 5px solid;
         border-color:black;
         border-top: 5px solid;
     }
+
+    .lyrics {
+        white-space: pre-wrap;
+        text-align: left;
+    }
+    .home-link {
+        color: grey;
+        text-align: left;
+    }
