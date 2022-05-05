@@ -1,8 +1,47 @@
-.lyrics {
-    white-space: pre-wrap;
-    text-align: left;
-}
-.home-link {
-    color: grey;
-    text-align: left;
-}
+header, footer{
+    background-color: grey;
+    color: black;
+    
+    }
+    
+    body{
+        background-color: #222;
+        
+    }
+    
+    
+    .form{
+    border-color:grey ;
+    border-right: 5px solid;
+    border-left: 5px solid;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    
+    }
+    .songs{
+        border-color:grey ;
+        border-right: 5px solid;
+        border-left: 5px solid;
+        border-top: 5px solid;
+        border-bottom: 5px solid;
+        }
+    
+        
+        .secondary-header{
+            border-color:black ;
+            border-bottom: 5px solid;  
+        }
+    
+        .secondary-footer{
+            border-color:black;
+            border-top: 5px solid;
+        }
+    
+        .lyrics {
+            white-space: pre-wrap;
+            text-align: left;
+        }
+        .home-link {
+            color: grey;
+            text-align: left;
+        }
