@@ -11,7 +11,7 @@ function getArtistAndSong() {
 
     // get song
     var songTitle = artistNameArr[1].split("=")[1];
-    // console.log(artist, songTitle);
+   
 
     displayLyrics(artist, songTitle);
     createReturnLink(artist);
