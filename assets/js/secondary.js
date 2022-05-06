@@ -46,8 +46,4 @@ function createReturnLink (artist) {
     homeLink.style.color = "black";
 }
 
-<<<<<<< HEAD
 getArtistAndSong();
-=======
-getArtistAndSong();
->>>>>>> 7132243c026a7081a8ad991f6fd1f78c4bff1eed

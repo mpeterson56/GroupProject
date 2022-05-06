@@ -98,8 +98,4 @@ getArtistName();
 
 if (searchButtonEl) {
     searchButtonEl.addEventListener("click", formAndLinkHandler);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 7132243c026a7081a8ad991f6fd1f78c4bff1eed
