@@ -4,7 +4,6 @@ var createHomeLink = document.getElementById("home-link");
 function getArtistAndSong() {
     // get url
     var url = document.location.search;
-    // console.log(document.location)
     // get artist name
     var artistNameArr = url.split("&");
     var artist = artistNameArr[0].split("=")[1];
@@ -15,6 +14,7 @@ function getArtistAndSong() {
     // console.log(artist, songTitle);
 
     displayLyrics(artist, songTitle);
+    createReturnLink(artist);
 
 };
 
@@ -29,11 +29,6 @@ function displayLyrics(artist, song) {
                 console.log(data);
                 // display lyrics
                 lyrics.textContent = data.lyrics;
-                var homeLink = document.createElement("a");
-                homeLink.href = "./index.html?artist=" + artist;
-                homeLink.text = "Return to Home Page";
-                createHomeLink.appendChild(homeLink);
-
             });
         }
         else {
@@ -42,5 +37,13 @@ function displayLyrics(artist, song) {
     });
 
 };
+
+function createReturnLink (artist) {
+    var homeLink = document.createElement("a");
+    homeLink.href = "./index.html?artist=" + artist;
+    homeLink.text = "Return to Home Page";
+    createHomeLink.appendChild(homeLink);
+    homeLink.style.color = "black";
+}
 
 getArtistAndSong();
