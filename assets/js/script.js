@@ -29,7 +29,6 @@ function getDiscography(artist) {
     if (artist.match(/\s/)) {
         var a = artist.split(' ').join('+');
         var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + a + "&page_size=10&page=1&s_track_rating=desc";
-        // console.log(APIurl);
 
     } else {
         var APIurl = "http://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + artist + "&page_size=10&page=1&s_track_rating=desc";
@@ -99,8 +98,4 @@ getArtistName();
 
 if (searchButtonEl) {
     searchButtonEl.addEventListener("click", formAndLinkHandler);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 7132243c026a7081a8ad991f6fd1f78c4bff1eed
