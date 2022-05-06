@@ -9,7 +9,6 @@ function formAndLinkHandler(event) {
     // location.reload();
 
     var artistInput = artistEl.value;
-    // console.log(artistInput);
 
         getDiscography(artistInput);
 
