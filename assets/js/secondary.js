@@ -1,5 +1,6 @@
 var lyrics = document.querySelector(".lyrics");
 var createHomeLink = document.getElementById("home-link");
+var tuneBlastLink = document.querySelector(".tune-blast-link");
 
 function getArtistAndSong() {
     // get url
@@ -43,7 +44,18 @@ function createReturnLink (artist) {
     homeLink.href = "./index.html?artist=" + artist;
     homeLink.text = "Return to Home Page";
     createHomeLink.appendChild(homeLink);
-    homeLink.style.color = "black";
+    homeLink.style.color = "Black";
+    homeLink.style.decoration = "none";
+
+    var tuneLink = document.createElement("a");
+    // tuneLink.innerHTML = "<h1 class='uk-align-center uk-animation-shake uk-animation-reverse'><span k-icon='icon: bolt; ratio: 2'></span>"
+    tuneLink.href = "./index.html?artist=" + artist;
+    tuneLink.text = "Tune Blast";
+    // tuneLink.innerHTML = "<span uk-icon='icon: bolt; ratio: 2'></span>";
+    tuneBlastLink.appendChild(tuneLink);
+    tuneLink.style.color = "Black";
+    tuneLink.style.decoration = "none";
+
 }
 
 getArtistAndSong();
