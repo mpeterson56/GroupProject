@@ -27,10 +27,10 @@ function getDiscography(artist) {
     // check for spaces in the name and add a "+"
     if (artist.match(/\s/)) {
         var a = artist.split(' ').join('+');
-        var APIurl = "https://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + a + "&page_size=10&page=1&s_track_rating=desc";
+        var APIurl = "https://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + a + "&page_size=20&page=1&s_track_rating=desc";
 
     } else {
-        var APIurl = "https://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + artist + "&page_size=10&page=1&s_track_rating=desc";
+        var APIurl = "https://api.musixmatch.com/ws/1.1/track.search?apikey=" + APIkey + "&q_artist=" + artist + "&page_size=20&page=1&s_track_rating=desc";
         console.log(APIurl);
     }
 
@@ -59,7 +59,7 @@ function getDiscography(artist) {
                         listEl.innerHTML = "<a href=./secondary.html?artist=" + artist + "&song=" + tracks + ">" + trackList + "</a>";
                     }
                     songList.appendChild(listEl);
-                    // console.log(listEl);
+                    console.log(listEl);
                 }
 
             });
