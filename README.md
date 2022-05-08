@@ -1,4 +1,5 @@
 ## Tune Blast
+![](./assets/images/TuneBlastHeroCopy.jpg)
 
 ## Purpose
 a website to search your favorite artist anf look up lyrics to their songs.
