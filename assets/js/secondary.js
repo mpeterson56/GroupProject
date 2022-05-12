@@ -25,7 +25,7 @@ function displayLyrics(artist, song, songId) {
 
     var APIkey = "2272bb113a5e5a54f0040d944c8e7d08"
 
-    var musicmatchAPI = "https://tracking.musixmatch.com/t1.0/" + APIkey + "track.lyrics.get?track_id=" + songId;
+    var musicmatchAPI = "https://api.musixmatch.com/ws/1.1/track.lyrics.get?apikey=" + APIkey + "&track_id=" + songId;
 
     // var urlApi = "https://api.lyrics.ovh/v1/" + artist + "/" + song;
 
@@ -33,11 +33,10 @@ function displayLyrics(artist, song, songId) {
     fetch(musicmatchAPI).then(function (response) {
         console.log(response);
         if (response.ok) {
-            // response.text()
             response.json().then(function (data) {
-                console.log(response.text());
+                console.log(data);
                 // display lyrics
-                lyrics.textContent = data.message.body.lyrics_body;
+                lyrics.textContent = data.message.body.lyrics.lyrics_body;
             });
         }
         else {
@@ -59,7 +58,7 @@ function createReturnLink (artist) {
 
     var tuneLink = document.createElement("a");
     tuneLink.href = "./index.html?artist=" + artist;
-    tuneLink.text = "Tune Blast";
+    tuneLink.text = "Tune Blast 1.0";
     tuneBlastLink.appendChild(tuneLink);
     tuneLink.style.color = "Black";
     tuneLink.style.decoration = "none";
