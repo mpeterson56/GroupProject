@@ -9,33 +9,42 @@ function getArtistAndSong() {
     var artistNameArr = url.split("&");
     var artist = artistNameArr[0].split("=")[1];
 
-
     // get song
     var songTitle = artistNameArr[1].split("=")[1];
+
+    // get song ID
+    var songId =artistNameArr[2].split("=")[1];
    
 
-    displayLyrics(artist, songTitle);
+    displayLyrics(artist, songTitle, songId);
     createReturnLink(artist);
 
 };
 
-function displayLyrics(artist, song) {
+function displayLyrics(artist, song, songId) {
 
-    var urlApi = "https://api.lyrics.ovh/v1/" + artist + "/" + song;
+    var APIkey = "2272bb113a5e5a54f0040d944c8e7d08"
+
+    var musicmatchAPI = "https://api.musixmatch.com/ws/1.1/track.lyrics.get?apikey=" + APIkey + "&track_id=" + songId;
+
+    // var urlApi = "https://api.lyrics.ovh/v1/" + artist + "/" + song;
 
     // make a get request with to API
-    fetch(urlApi).then(function (response) {
+    fetch(musicmatchAPI).then(function (response) {
+        console.log(response);
         if (response.ok) {
             response.json().then(function (data) {
                 console.log(data);
                 // display lyrics
-                lyrics.textContent = data.lyrics;
+                lyrics.textContent = data.message.body.lyrics.lyrics_body;
             });
         }
         else {
             UIkit.modal.dialog('Error'+ response.statusText);
         }
     });
+    
+    
 
 };
 
@@ -48,10 +57,8 @@ function createReturnLink (artist) {
     homeLink.style.decoration = "none";
 
     var tuneLink = document.createElement("a");
-    // tuneLink.innerHTML = "<h1 class='uk-align-center uk-animation-shake uk-animation-reverse'><span k-icon='icon: bolt; ratio: 2'></span>"
     tuneLink.href = "./index.html?artist=" + artist;
-    tuneLink.text = "Tune Blast";
-    // tuneLink.innerHTML = "<span uk-icon='icon: bolt; ratio: 2'></span>";
+    tuneLink.text = "Tune Blast 1.0";
     tuneBlastLink.appendChild(tuneLink);
     tuneLink.style.color = "Black";
     tuneLink.style.decoration = "none";
